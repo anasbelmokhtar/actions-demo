@@ -1,7 +1,7 @@
 FROM openjdk:17-oracle
 
-ARG JAR_FILE=target/find-links.jar
-ARG JAR_LIB_FILE=target/lib/
+#ARG JAR_FILE=target/find-links.jar
+#ARG JAR_LIB_FILE=target/lib/
 
 # cd /usr/local/runme
 WORKDIR /usr/local/runme
