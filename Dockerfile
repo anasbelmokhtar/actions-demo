@@ -7,7 +7,7 @@ FROM openjdk:17-oracle
 WORKDIR /usr/local/runme
 
 # copy target/find-links.jar /usr/local/runme/app.jar
-COPY target/DemoApplication.jar DemoApplication.jar
+COPY DemoApplication.jar DemoApplication.jar
 
 # copy project dependencies
 # cp -rf target/lib/  /usr/local/runme/lib
