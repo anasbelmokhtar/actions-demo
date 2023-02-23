@@ -12,7 +12,16 @@ repositories {
 	mavenCentral()
 }
 
+bootJar{
+	enabled = true;
+	archiveFileName = "DemoApplication.jar"
+	manifest{
+		attributes 'provider': 'gradle'
+	}
+}
+
 dependencies {
+	implementation 'org.springframework:spring-web:6.0.5'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
@@ -20,3 +29,4 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
