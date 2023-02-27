@@ -14,7 +14,7 @@ COPY ${JAR_FILE} /DemoApplication.jar
 ADD ${JAR_LIB_FILE} lib/
 
 RUN gradle build /build/target/DemoApplication.jar
-COPY --from=0 /build/target/export-run-artifact.jar  /app/target/export-run-artifact.jar
+COPY --from=0 /build/target/DemoApplication.jar  /app/target/DemoApplication.jar
 EXPOSE 8080
 # java -jar /usr/local/runme/app.jar
-ENTRYPOINT ["java","-jar","/DemoApplication.jar"]
+ENTRYPOINT ["java","-jar","DemoApplication.jar"]
