@@ -3,7 +3,7 @@ FROM openjdk:17-oracle
 # cd /usr/local/runme
 WORKDIR /build
 
-RUN gradle build /build/target/DemoApplication.jar
+RUN ./gradlew build /build/target/DemoApplication.jar
 COPY --from=0 /build/target/DemoApplication.jar  /app/target/DemoApplication.jar
 EXPOSE 8080
 # java -jar /usr/local/runme/app.jar
