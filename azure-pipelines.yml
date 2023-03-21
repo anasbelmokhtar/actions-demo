@@ -17,3 +17,7 @@ steps:
     repository: 'abelmokhtar/actions-demo'
     command: 'build'
     Dockerfile: '**/Dockerfile'
+- task: Docker@2
+  inputs:
+    repository: 'abelmokhtar/actions-demo'
+    command: 'push'
