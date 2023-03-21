@@ -14,10 +14,6 @@ steps:
   displayName: 'Run a one-line script'
 - task: Docker@2
   inputs:
-    repository: 'docker.io/abelmokhtar/actions-demo'
-    command: 'build'
+    repository: 'abelmokhtar/actions-demo'
+    command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-- task: Docker@2
-  inputs:
-    repository: 'docker.io/abelmokhtar/actions-demo'
-    command: 'push'
